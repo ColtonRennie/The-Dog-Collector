@@ -19,7 +19,7 @@
   <body>
     <header class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper">
+        <div class="nav-wrapper teal darken-3">
           <ul>
             <li>
               <a href="/" class="left brand-logo">&nbsp;&nbsp;DogCollector</a>
@@ -32,10 +32,13 @@
         </div>
       </nav>
     </header>
-    <main class="container">{% block content %} {% endblock %}</main>
-    <footer class="page-footer">
+    <main class="container">
+      {% block content %} This is my home page {% endblock %}
+    </main>
+    <footer class="page-footer teal darken-3">
+      <div class="left collector">&nbsp; I AM THE DOG COLLECTOR!</div>
       <div class="right">
-        All Rights Reserved, &copy; 2019 Dog Collector &nbsp;
+        All Rights Reserved, &copy; 2022 Dog Collector &nbsp;
       </div>
     </footer>
   </body>

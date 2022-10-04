@@ -9,9 +9,9 @@ class Dog:
     self.age = age
 
 dogs = [
-  Dog('Barky', 'Mixed', 'bad dog', 3),
-  Dog('Dancer', 'Mixed', 'good dog', 6),
-  Dog('Rudolph', 'Mixed', 'This is a dog', 5)
+  Dog('Norah', 'Belgian Tervuren', 'She is a long haired mixed tans and black that has a lot of energy', 8),
+  Dog('Youki', 'Mixed', 'He is starting to get lazy in his old age, but is always up for a fight', 9),
+  Dog('Sadie', 'Mixed', 'She is the youngest of the pack and with lots of spunk and personality', 3)
 ]
 
 def home(request):
