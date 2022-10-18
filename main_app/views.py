@@ -10,7 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class DogCreate(CreateView):
   model = Dog
-  fields = '__all__'
+  fields = ['name', 'breed', 'description', 'age']
   success_url = '/dogs/'
 
   def form_valid(self, form):
@@ -59,7 +59,7 @@ class ToyDetail(LoginRequiredMixin,DetailView):
 
 class ToyCreate(LoginRequiredMixin,CreateView):
   model = Toy
-  fields = '__all__'
+  fields = ['name', 'color']
   success_url = '/toys/'
 
 class ToyUpdate(LoginRequiredMixin,UpdateView):
@@ -72,7 +72,6 @@ class ToyDelete(LoginRequiredMixin,DeleteView):
 
 @login_required
 def assoc_toy(request, dog_id, toy_id):
-  # Note that you can pass a toy's id instead of the whole object
   Dog.objects.get(id=dog_id).toys.add(toy_id)
   return redirect('detail', dog_id=dog_id)
 
